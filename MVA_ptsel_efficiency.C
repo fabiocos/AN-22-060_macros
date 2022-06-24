@@ -114,7 +114,7 @@ TCanvas* example_plot( int iPeriod, int iPos )
     latex.SetTextFont(42);
     latex.SetTextAngle(0);
     latex.SetTextColor(kBlack);
-    latex.SetTextSize(0.04);
+    latex.SetTextSize(0.05);
     latex.SetTextAlign(12);
     latex.DrawLatexNDC(.35,.50,"|#eta| < 1.5 , 1.6 < |#eta| < 3");
 

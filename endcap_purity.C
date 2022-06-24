@@ -100,7 +100,7 @@ TCanvas* example_plot( int iPeriod, int iPos )
 
     data1->GetXaxis()->SetTitleOffset(0);
     data1->GetXaxis()->SetNdivisions(6,5,0);
-    data1->GetXaxis()->SetTitle("p_{t} (GeV)");  
+    data1->GetXaxis()->SetTitle("p (GeV)");  
     data1->GetYaxis()->SetNdivisions(6,5,0);
     data1->GetYaxis()->SetTitle("PID purity");  
 
@@ -116,20 +116,20 @@ TCanvas* example_plot( int iPeriod, int iPos )
     data1->Draw("E1");
 
     data2->SetDirectory(0);
-    data2->SetMarkerStyle(20);
+    data2->SetMarkerStyle(21);
     data2->SetMarkerSize(markerSize);
     data2->SetMarkerColor(4);
     data2->Draw("E1SAME");
 
     data3->SetDirectory(0);
-    data3->SetMarkerStyle(20);
+    data3->SetMarkerStyle(34);
     data3->SetMarkerSize(markerSize);
     data3->SetMarkerColor(2);
     data3->Draw("E1SAME");
 
     TLegend *leg1 = new TLegend(.15,.15,.35,.35);
     leg1->SetTextFont(82);
-    leg1->SetTextSize(0.03);
+    leg1->SetTextSize(0.05);
     leg1->AddEntry(data1,"#pi","P");
     leg1->AddEntry(data2,"K","P");
     leg1->AddEntry(data3,"p","P");
@@ -139,7 +139,7 @@ TCanvas* example_plot( int iPeriod, int iPos )
     latex.SetTextFont(42);
     latex.SetTextAngle(0);
     latex.SetTextColor(kBlack);
-    latex.SetTextSize(0.04);
+    latex.SetTextSize(0.05);
     latex.SetTextAlign(12);
     latex.DrawLatexNDC(.17,.38,"1.6 < |#eta| < 3");
 
